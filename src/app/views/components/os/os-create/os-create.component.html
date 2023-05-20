@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="labels">
+        <mat-form-field>
+            <mat-label>Selecione um tecnico</mat-label>
+            <mat-select [(value)]="os.tecnico">            
+              <mat-option *ngFor="let tec of tecnicos" value="{{tec.id}}">{{ tec.nome }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Selecione um Cliente</mat-label>
+            <mat-select [(value)]="os.cliente">            
+              <mat-option *ngFor="let cli of clientes" value="{{cli.id}}">{{ cli.nome }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Selecione um status</mat-label>
+            <mat-select [(value)]="os.status">            
+              <mat-option value="{{0}}">ABERTO</mat-option>
+              <mat-option value="{{1}}">EM ANDAMENTO</mat-option>
+              <mat-option value="{{2}}">ENCERRADO</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Selecione uma prioridade</mat-label>
+            <mat-select [(value)]="os.prioridade">            
+              <mat-option value="{{0}}">BAIXA</mat-option>
+              <mat-option value="{{1}}">MÉDIA</mat-option>
+              <mat-option value="{{2}}">ALTA</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+          
+    </div>
+
+    <form class="example-form">
+        <mat-form-field class="full-width">
+          <mat-label>Adicione as observações</mat-label>
+          <textarea [(ngModel)] = "os.observacoes" name="observacoes" matInput maxlength="255" placeholder="Ex. It makes me feel..."></textarea>
+        </mat-form-field>
+    </form>
+    <button (click)="create()" mat-flat-button color="accent">Accent</button>
+    <button (click)="cancel()" mat-flat-button color="warn">Warn</button>
+
+</div>

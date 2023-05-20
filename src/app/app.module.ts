@@ -3,14 +3,85 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { HttpClientModule } from '@angular/common/http';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
+
+
+
+
+
+
+
+
+
+import { HeaderComponent } from './views/components/template/header/header.component';
+import { FooterComponent } from './views/components/template/footer/footer.component';
+import { NavComponent } from './views/components/template/nav/nav.component';
+import { HomeComponent } from './views/components/home/home.component';
+import { TecnicoReadComponent } from './views/components/tecnico/tecnico-read/tecnico-read.component';
+import { TecnicoCreateComponent } from './views/components/tecnico/tecnico-create/tecnico-create.component';
+import { TecnicoUpdateComponent } from './views/components/tecnico/tecnico-update/tecnico-update.component';
+import { TecnicoDeleteComponent } from './views/components/tecnico/tecnico-delete/tecnico-delete.component';
+import { ClienteReadComponent } from './views/components/cliente/cliente-read/cliente-read.component';
+import { ClienteCreateComponent } from './views/components/cliente/cliente-create/cliente-create.component';
+import { ClienteUpdateComponent } from './views/components/cliente/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './views/components/cliente/cliente-delete/cliente-delete.component';
+import { OsReadComponent } from './views/components/os/os-read/os-read.component';
+import { OsCreateComponent } from './views/components/os/os-create/os-create.component';
+import { OsUpdateComponent } from './views/components/os/os-update/os-update.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavComponent,
+    HomeComponent,
+    TecnicoReadComponent,
+    TecnicoCreateComponent,
+    TecnicoUpdateComponent,
+    TecnicoDeleteComponent,
+    ClienteReadComponent,
+    ClienteCreateComponent,
+    ClienteUpdateComponent,
+    ClienteDeleteComponent,
+    OsReadComponent,
+    OsCreateComponent,
+    OsUpdateComponent,
+    
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    [HttpClientModule,  ],
+    MatButtonModule,
+    MatInputModule,
+    MatSnackBarModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSelectModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
